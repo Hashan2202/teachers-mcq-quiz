@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ගුරු සේවා කාර්යක්ෂමතා කඩඉම – MCQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Serif+Sinhala:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1f2a24;--paper:#f6f4ee;--card:#fff;--moss:#2f5d47;--dark:#20402f;--gold:#b9862f;--line:#dcd6c6;--ok:#2f7d4f;--okbg:#e6f4ea;--bad:#b3402c;--badbg:#fbe9e5;--muted:#6b6355}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 "Noto Sans Sinhala","Noto Sans Tamil","Iskoola Pota","Latha",system-ui,sans-serif}
+header{background:var(--dark);color:#fff;padding:18px 16px 14px;border-bottom:4px solid var(--gold)}
+.top{max-width:860px;margin:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+h1{margin:0;font:700 1.25rem/1.4 "Noto Serif Sinhala","Noto Sans Tamil",serif}
+header p{margin:2px 0 0;font-size:.85rem;opacity:.85}
+.lang{display:flex;gap:4px;background:rgba(255,255,255,.12);padding:4px;border-radius:999px}
+.lang button{border:0;background:transparent;color:#fff;font:inherit;font-size:.85rem;padding:6px 12px;border-radius:999px;cursor:pointer}
+.lang button.on{background:var(--gold);font-weight:700}
+nav{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
+#mods{max-width:860px;margin:auto;display:flex;gap:8px;overflow-x:auto;padding:10px 14px;scroll-snap-type:x proximity;scrollbar-width:thin}
+#mods button{flex:0 0 auto;scroll-snap-align:start;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:.88rem;font-weight:600;padding:8px 14px;border-radius:999px;cursor:pointer;white-space:nowrap}
+#mods button.on{background:var(--moss);border-color:var(--moss);color:#fff}
+#mods small{opacity:.7;margin-inline-start:4px}
+.wrap{max-width:860px;margin:auto;padding:14px 14px 40px}
+.bar{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.stats{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.88rem;color:var(--muted)}
+.stats b{color:var(--moss);font-size:1.05rem}
+.track{height:7px;background:var(--line);border-radius:7px;margin:10px 0;overflow:hidden}
+.fill{height:100%;width:0;background:var(--moss);transition:width .3s}
+.tools{display:flex;flex-wrap:wrap;gap:8px}
+.btn{font:inherit;font-size:.88rem;border:1.5px solid var(--line);background:var(--card);color:var(--ink);padding:8px 14px;border-radius:10px;cursor:pointer}
+.btn.pri{background:var(--moss);border-color:var(--moss);color:#fff;font-weight:700}
+.btn.gold{background:#fff6e0;border-color:var(--gold);color:#7a5514;font-weight:600}
+.note{margin:12px 0 0;padding:8px 12px;background:#fff6e0;border-radius:8px;font-size:.85rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:14px;box-shadow:0 2px 8px rgba(32,64,47,.06)}
+.meta{display:flex;justify-content:space-between;gap:8px;font-size:.75rem;color:var(--muted);font-weight:600;margin-bottom:6px}
+.tag{background:#eaf1ec;color:var(--moss);padding:2px 10px;border-radius:999px}
+.card h3{margin:0 0 12px;font-size:1.02rem;line-height:1.6}
+.opt{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:start;font:inherit;font-size:.95rem;background:#fff;color:var(--ink);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:8px;cursor:pointer;min-height:46px}
+.opt i{flex:0 0 26px;height:26px;border-radius:50%;background:var(--paper);font-style:normal;font-weight:700;font-size:.8rem;display:grid;place-items:center}
+.opt:hover:not(:disabled){border-color:var(--moss);background:#f3f8f4}
+.opt:disabled{cursor:default}
+.opt.ok{background:var(--okbg);border-color:var(--ok);font-weight:600}
+.opt.bad{background:var(--badbg);border-color:var(--bad);font-weight:600}
+.fb{font-weight:700;font-size:.9rem;margin:4px 0}
+.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.exp{margin-top:10px;background:#f4f1e6;border-inline-start:4px solid var(--gold);border-radius:8px;padding:10px 12px;font-size:.88rem}
+.exp b{display:block;color:#7a5514;margin-bottom:2px}
+.nt{font-size:.75rem;color:var(--muted);margin:0 0 8px}
+.end{text-align:center;margin-top:22px}
+.end .btn{font-size:1rem;padding:12px 28px}
+#ov{position:fixed;inset:0;background:rgba(20,30,24,.6);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+#ov.show{display:flex}
+.dlg{background:var(--card);border-radius:18px;max-width:440px;width:100%;padding:24px;text-align:center;max-height:90vh;overflow:auto}
+.dlg h2{margin:0 0 8px;font-size:1.1rem}
+.big{font-size:3rem;font-weight:700;color:var(--moss);line-height:1.2}
+.pct{font-size:1.4rem;font-weight:700;color:var(--gold)}
+.dlg p{margin:8px 0;color:var(--muted);font-size:.92rem}
+.dlg .tools{justify-content:center;margin-top:14px}
+footer{text-align:center;font-size:.82rem;color:var(--muted);padding:18px 14px 34px;border-top:1px solid var(--line)}
+footer a{color:var(--moss);font-weight:600}
+</style>
+</head>
+<body>
+<header><div class="top">
+  <div><h1 id="hTitle"></h1><p id="hSub"></p></div>
+  <div class="lang" id="lang"></div>
+</div></header>
+<nav><div id="mods"></div></nav>
+<main class="wrap">
+  <div class="bar">
+    <div class="stats" id="stats"></div>
+    <div class="track"><div class="fill" id="fill"></div></div>
+    <div class="tools" id="tools"></div>
+    <div class="note" id="note" style="display:none"></div>
+  </div>
+  <div id="list"></div>
+  <div class="end" id="end"></div>
+</main>
+<div id="ov"><div class="dlg" id="dlg"></div></div>
+<footer id="foot"></footer>
+
+<script>
+/* Each question: m=module, q/o/n/h = question/options/note/reference per language.
+   To add a translation, add "en" / "ta" keys beside "si" – it is picked up automatically. */
+const Q = [{"m":1,"q":{"si":"ජාතික ගුරු නිපුණතා රාමුවක් (NTCF) හඳුන්වා දෙන ප්‍රධාන අරමුණ කුමක්ද?"},"o":{"si":["ගුරුවරුන්ට දඬුවම් කිරීම","ගුරු වෘත්තියේ ප්‍රමිතීන් ස්ථාපිත කර වෘත්තීය දියුණුවට මග පෙන්වීම","ගුරුවරුන්ගේ වැටුප් අඩු කිරීම","පාසල් වසා දැමීම"]},"c":1,"h":{"si":"1.1 - ජාතික ගුරු නිපුණතා රාමුව හඳින්වීම"},"n":{"si":"NTCF යනු ගුරු වෘත්තීය ප්‍රමිතීන් ස්ථාපිත කිරීම, ගුරු අධ්‍යාපනයට මග පෙන්වීම, CPD, කාර්ය සාධන ඇගයීම සහ ප්‍රතිපත්ති සැකසීම සඳහා පදනම වන ලේඛනයකි."}},{"m":1,"q":{"si":"'නිපුණතාවක්' (Competency) යනු කුමන කරුණු තුනක එකතුවක්ද?"},"o":{"si":["දැනුම, කුසලතා, ආකල්ප","වයස, පළපුරුද්ද, උපාධිය","වැටුප, තනතුර, පාසල","ලකුණු, ශ්‍රේණිය, සහතිකය"]},"c":0,"h":{"si":"1.1 - නිපුණතා, ගුරු නිපුණතා හා ඉගැන්වීමේ නිපුණතා"},"n":{"si":"නිපුණතාවක් යනු කාර්යයක් සාර්ථකව ඉටු කිරීමට අවශ්‍ය දැනුම, කුසලතා සහ ආකල්ප යන ත්‍රිත්වයේ එකතුවයි. එය මැනිය හැකි හා නිරීක්ෂණය කළ හැකි විය යුතුය."}},{"m":1,"q":{"si":"පහත ඒවායින් ගුරු නිපුණතා (Teacher Competencies) කොටසකට අයත් නොවන්නේ කුමක්ද?"},"o":{"si":["විෂය දැනුම පිළිබඳ නිපුණතාව","පන්තිකාමර කළමනාකරණ නිපුණතාව","දේශපාලන බලය ලබාගැනීමේ නිපුණතාව","තාක්ෂණික නිපුණතාව"]},"c":2,"h":{"si":"1.1 - ගුරු නිපුණතා"},"n":{"si":"ගුරු නිපුණතා ලෙස විෂය දැනුම, වෘත්තීය නිපුණතාව, පන්තිකාමර කළමනාකරණය, සන්නිවේදන නිපුණතාව සහ තාක්ෂණික නිපුණතාව හඳුන්වා දී ඇත."}},{"m":1,"q":{"si":"'ඉගැන්වීමේ නිපුණතා' (Teaching Skills) හෙවත් 'ඉගැන්වීමේ කලාව' ට අයත් නොවන කුමක්ද?"},"o":{"si":["ප්‍රශ්න කිරීමේ නිපුණතාව","සංවෘත කිරීමේ නිපුණතාව (Closure)","විභාග ප්‍රතිඵල හසුරුවා ගැනීමේ නිපුණතාව","පාඩම හඳුන්වා දීමේ නිපුණතාව"]},"c":2,"h":{"si":"1.1 - ඉගැන්වීමේ නිපුණතා (Teaching Skills)"},"n":{"si":"ප්‍රධාන ඉගැන්වීමේ නිපුණතා ලෙස ප්‍රශ්න කිරීම, පාඩම හඳුන්වාදීම, විස්තර/පැහැදිලි කිරීම, උපකරණ භාවිතය, සංවෘත කිරීම (Closure) සහ සිසු ප්‍රතිචාර කළමනාකරණය දැක්වේ."}},{"m":1,"q":{"si":"අද පාසල් පද්ධතියේ ගුරුවරුන් මුහුණපාන අභියෝගවලින් 'තාක්ෂණික අභියෝගයකට' හොඳම උදාහරණය කුමක්ද?"},"o":{"si":["විෂමජාතීය සිසු කණ්ඩායම්","ඩිජිටල් සාක්ෂරතාව නොමැතිකම","දෙමාපිය අපේක්ෂා","වෘත්තීය හුදකලාව"]},"c":1,"h":{"si":"1.1 - ඉගෙනුම් ඉගැන්වීමේදී ගුරුවරුන් මුහුණ දෙන අභියෝග"},"n":{"si":"ඩිජිටල් සාක්ෂරතාව හා තාක්ෂණික පරතරය තාක්ෂණික අභියෝග යටතේ, විෂමජාතීය සිසු කණ්ඩායම් පන්තිකාමර කළමනාකරණ අභියෝගයක් ලෙසත්, දෙමාපිය අපේක්ෂා සමාජ-ආර්ථික අභියෝගයක් ලෙසත් වර්ග කර ඇත."}},{"m":1,"q":{"si":"NTCF එකේ 'සංවර්ධන මට්ටම්' (Professional Career Stages) ලෙස හඳුන්වා දෙනු ලබන්නේ කුමන ගුරු කාණ්ඩ තුනද?"},"o":{"si":["ආධුනික, පූර්ණ, විශිෂ්ට ගුරු","නවක, මධ්‍යම, ජ්‍යෙෂ්ඨ","ශිල්පී, විද්වත්, උපදේශක","පුහුණු, නොපුහුණු, විශේෂඥ"]},"c":0,"h":{"si":"1.1 - ජාතික ගුරු නිපුණතා රාමුවෙහි වූහය හා අන්තර්ගතය"},"n":{"si":"ආධුනික ගුරු (Beginning), පූර්ණ ගුරු (Proficient), විශිෂ්ට ගුරු (Highly Accomplished/Lead) ලෙස සංවර්ධන මට්ටම් තුනක් දැක්වේ."}},{"m":1,"q":{"si":"'දෘශ්‍ය ඉගෙනුම්කරුවෙකු' (Visual Learner) වඩාත් හොඳින් ඉගෙන ගන්නේ කුමන ක්‍රමයෙන්ද?"},"o":{"si":["හඬ පට අසා","රූප සටහන් හා වර්ණවත් සටහන් හරහා","ප්‍රායෝගිකව කර බලා","පොත් කියවා"]},"c":1,"h":{"si":"1.2 - ඉගෙනුම් විලාසයන් (Learning Styles)"},"n":{"si":"දෘශ්‍ය ඉගෙනුම්කරුවන් රූප සටහන්, වීඩියෝ, ප්‍රස්ථාර හා වර්ණවත් සටහන් ගින් වඩා හොඳින් ඉගෙන ගනී."}},{"m":1,"q":{"si":"'චාලක ඉගෙනුම්කරුවෙකු' (Kinesthetic Learner) හඳුනාගැනීමට හොඳම ලක්ෂණය කුමක්ද?"},"o":{"si":["සවන් දීමෙන් ඉගෙන ගැනීම","ප්‍රායෝගිකව කර බැලීමෙන් ඉගෙන ගැනීම","ලිවීමෙන් දැනුම වර්ධනය කර ගැනීම","චිත්‍ර දෙස බලා ඉගෙන ගැනීම"]},"c":1,"h":{"si":"1.2 - ඉගෙනුම් විලාසයන්"},"n":{"si":"චාලක/ස්පර්ශ ඉගෙනුම්කරුවන් අත්හදා බැලීම් (Experiments, Models) හරහා ප්‍රායෝගිකව කර බැලීමෙන් ඉගෙන ගැනීමට කැමතියි."}},{"m":1,"q":{"si":"'විෂය මාලාව' (Curriculum), 'විෂය නිර්දේශය' (Syllabus) සහ 'විෂය අන්තර්ගතය' (Content) අතර වෙනස පිළිබඳ නිවැරදි ප්‍රකාශය කුමක්ද?"},"o":{"si":["තුනම එකම දෙයයි","විෂය මාලාව වඩාත් පුළුල් සංකල්පයක් වන අතර විෂය අන්තර්ගතය වඩාත් පටු, විශේෂිත කරුණුය","විෂය නිර්දේශය විෂය මාලාවට වඩා පුළුල්ය","විෂය අන්තර්ගතය පමණක් අධ්‍යාපන ආයතනය සකසයි"]},"c":1,"h":{"si":"1.2 - විෂය මාලාව, විෂය නිර්දේශය හා විෂය අන්තර්ගතය"},"n":{"si":"විෂය මාලාව = පුළුල් දාර්ශනික සැලැස්ම; විෂය නිර්දේශය = නිශ්චිත විෂයකට අදාළ මාතෘකා ලැයිස්තුව; විෂය අන්තර්ගතය = එහි ඇති විශේෂිත තොරතුරු/කරුණු."}},{"m":1,"q":{"si":"'ගැටලු විසඳීම' (Problem-Based Learning) හා 'සොයාබැලීමේ ඉගෙනුම' (Inquiry-Based Learning) අයත් වන්නේ කුමන ප්‍රවර්ගයටද?"},"o":{"si":["ගුරු කේන්ද්‍රීය ඉගෙනුම් ක්‍රම","සිසු කේන්ද්‍රීය ඉගෙනුම් ක්‍රම","තාක්ෂණය ඇසුරු කළ ඉගෙනුම් ක්‍රම පමණි","මෙයින් කිසිවක් නොවේ"]},"c":1,"h":{"si":"1.2 - විවිධ ඉගෙනුම් ක්‍රමවේද හා උපාය මාර්ග"},"n":{"si":"ගැටලු විසඳීම, සොයාබැලීමේ ඉගෙනුම සහ සහයෝගී ඉගෙනුම සිසු කේන්ද්‍රීය ඉගෙනුම් ක්‍රම යටතේ දැක්වේ; ගුරුවරයා පහසුකාරකයෙකු ලෙස පමණක් ක්‍රියා කරයි."}},{"m":1,"q":{"si":"'Feynman තාක්ෂණය' (Feynman Technique) යනු කුමන ඉගෙනුම් උපාය මාර්ගයද?"},"o":{"si":["ඉගෙන ගත් දේ නැවත නැවත කටපාඩම් කිරීම","සංකීර්ණ කරුණක් සරල භාෂාවෙන් අන් අයෙකුට පැහැදිලි කිරීමට උත්සාහ කිරීම","චිත්‍ර සටහන් ඇඳීම","පොත වසාගෙන ප්‍රශ්න අසා පිළිතුරු දීම"]},"c":1,"h":{"si":"1.2 - විවිධ ඉගෙනුම් උපාය මාර්ග"},"n":{"si":"Feynman තාක්ෂණයේදී ඔබ ඉගෙන ගත් දෙයක් නොදන්නා අයෙකුට හෝ කුඩා දරුවෙකුට සරල භාෂාවෙන් පැහැදිලි කිරීමට උත්සාහ කරයි; නොතේරෙන කොටස් එමගින් හඳුනාගත හැක."}},{"m":1,"q":{"si":"'නිර්මාණාත්මක තක්සේරුකරණය' (Formative Assessment) පිළිබඳ නිවැරදි ප්‍රකාශය කුමක්ද?"},"o":{"si":["වාර විභාග අවසානයේ පමණක් සිදු කරයි","ඉගෙනුම් ක්‍රියාවලිය අතරතුරදී සිසුන්ගේ දුර්වලතා හඳුනාගෙන ඉගැන්වීම වෙනස් කර ගැනීම සඳහා සිදු කරයි","සිසුවාට ශ්‍රේණියක් ලබාදීම පමණක් අරමුණයි","ජාතික මට්ටමේ විභාග පමණි"]},"c":1,"h":{"si":"1.2 - සිසු ඉගෙනුම තක්සේරුකරණය"},"n":{"si":"නිර්මාණාත්මක තක්සේරුකරණය ඉගෙනුම් ක්‍රියාවලිය අතරතුර සිදුවන අතර, එහි අරමුණ දුර්වලතා හඳුනාගෙන ඉගැන්වීම වෙනස් කර ගැනීමයි (උදා: පන්ති කාමර ප්‍රශ්න, කෙටි පරීක්ෂණ)."}},{"m":1,"q":{"si":"'නිර්මාණාත්මක ප්‍රතිපෝෂණය' (Constructive Feedback) විය යුත්තේ කෙසේද?"},"o":{"si":["අවිනිශ්චිත හා පොදු ලෙස","පැහැදිලි, නිශ්චිත සහ ක්‍රියාත්මක කළ හැකි ලෙස","සිසුවා අධෛර්යමත් කරන ලෙස","වාරයක් අවසානයේ පමණක්"]},"c":1,"h":{"si":"1.2 - ප්‍රතිපෝෂණය (Feedback)"},"n":{"si":"ප්‍රතිපෝෂණය පැහැදිලි, නිශ්චිත, කාලෝචිත සහ ක්‍රියාත්මක කළ හැකි ආකාරයට තිබිය යුතුය."}},{"m":1,"q":{"si":"සිසුවෙකුගේ දිගු කාලීන නිර්මාණ එකතු කරන 'වාර්තා ක්‍රමය' කුමක්ලෙස හඳුන්වයිද?"},"o":{"si":["Progress Report","Portfolio Assessment","Term Test","Exit Ticket"]},"c":1,"h":{"si":"1.2 - වාර්තාකරණය (Reporting)"},"n":{"si":"Portfolio Assessment (කුති වාර්තා) යනු සිසුවා කාලයක් පුරා නිර්මාණය කළ කටයුතු හා පැවරුම් සොදන කර එකතු කර වාර්තා කිරීමයි."}},{"m":1,"q":{"si":"'සුරක්ෂිත ඉගැන්වීම් පරිසරයක' ප්‍රධාන අංශ 4 කුමක්ද?"},"o":{"si":["භෞතික, මානසික/චිත්තවේගීය, සමාජීය, සංස්කෘතික/දෘෂ්ටිවාදී","ආර්ථික, දේශපාලන, පාරිසරික, තාක්ෂණික","විනය, පාඩම, විභාග, ක්‍රීඩා","ගුරු, දෙමාපිය, ප්‍රජාව, රජය"]},"c":0,"h":{"si":"1.3 - සුරක්ෂිත ඉගැන්වීම් පරිසරය"},"n":{"si":"සුරක්ෂිත ඉගැන්වීම් පරිසරය භෞතික සුරක්ෂිතතාව, මානසික/චිත්තවේගීය සුරක්ෂිතතාව, සමාජීය සුරක්ෂිතතාව සහ සංස්කෘතික/දෘෂ්ටිවාදී සුරක්ෂිතතාව ලෙස වර්ග කර විග්‍රහ කර ඇත."}},{"m":1,"q":{"si":"'Bullying' වැළැක්වීම වර්ග වන්නේ කුමන ආරක්ෂිතතා ප්‍රවර්ගයටද?"},"o":{"si":["භෞතික සුරක්ෂිතතාව","සමාජීය සුරක්ෂිතතාව","සංස්කෘතික සුරක්ෂිතතාව","මූල්‍ය සුරක්ෂිතතාව"]},"c":1,"h":{"si":"1.3 - සුරක්ෂිත ඉගැන්වීම් පරිසරය - සමාජීය සුරක්ෂිතතාව"},"n":{"si":"Bullying වැළැක්වීම, සාමූහිකත්වය හා සහයෝගය, ගුරු-සිසු බැඳීම යන කරුණු සමාජීය සුරක්ෂිතතාව යටතේ දැක්වේ."}},{"m":1,"q":{"si":"'ශිෂ්‍ය උපදේශනය' (Student Counseling) හා 'වෘත්තීය මාර්ගෝපදේශනය' (Career Guidance) අතර ප්‍රධාන වෙනස කුමක්ද?"},"o":{"si":["දෙකම එකම දෙයයි","උපදේශනය සිසුවාගේ මනස සුවපත් කරන අතර මාර්ගෝපදේශනය අනාගත වෘත්තිය ඉලක්ක කරයි","මාර්ගෝපදේශනය දෙමාපියන් සඳහා පමණි","උපදේශනය විභාග සඳහා පමණි"]},"c":1,"h":{"si":"1.3 - ශිෂ්‍ය උපදේශනය හා වෘත්තීය මාර්ගෝපදේශනය"},"n":{"si":"ශිෂ්‍ය උපදේශනය අභ්‍යන්තරික සුවතාවය (ගැටලු නිරාකරණය, ආත්ම විශ්වාසය) ඉලක්ක කරන අතර වෘත්තීය මාර්ගෝපදේශනය බාහිර අරමුණු (අනාගතය, සැලසුම් කිරීම) ඉලක්ක කරයි."}}]};
+
+const UI = {
+ si:{t:"ගුරු සේවා කාර්යක්ෂමතා කඩඉම – MCQ අභ්‍යාස",s:"මොඩියුල 1 – 4 · සියලුම ප්‍රශ්න එකට",all:"සියලුම ප්‍රශ්න",
+  m:{1:"මොඩියුල 1 – ගුරු නිපුණතා රාමුව හා වෘත්තිකභාවය",2:"මොඩියුල 2 – ඉගැන්වීම් ක්‍රමවේදය",3:"මොඩියුල 3 – අධ්‍යාපන තාක්ෂණය (EdTech)",4:"මොඩියුල 4 – අධ්‍යාපන නීතිය"},
+  qs:"ප්‍රශ්න",ans:"පිළිතුරු දුන්",cor:"නිවැරදි",sc:"ලකුණු",shuf:"🔀 මුසු කරන්න",rst:"🔄 නැවත ආරම්භ",fin:"🏁 අවසන් කර ලකුණු බලන්න",
+  rev:"නිවැරදි පිළිතුර බලන්න",okm:"✔ නිවැරදියි!",badm:"✘ වැරදියි",exp:"පැහැදිලි කිරීම",ref:"යොමුව",
+  notr:"මෙම ප්‍රශ්නයේ පරිවර්තනය තවම නැත – සිංහලෙන් පෙන්වයි.",rt:"ඔබේ ප්‍රතිඵලය",of:"න්",un:"පිළිතුරු නොදුන්",
+  rw:"වැරදි පිළිතුරු නැවත බලන්න",ag:"නැවත උත්සාහ කරන්න",cl:"වසන්න",all2:"සියල්ල පෙන්වන්න",wo:"දැන් පෙන්වන්නේ වැරදි / නොකළ ප්‍රශ්න පමණි.",
+  g:["විශිෂ්ටයි! 🎉","ඉතා හොඳයි 👏","හොඳයි, තව ටිකක් පුහුණු වන්න","තවත් අධ්‍යයනය කර නැවත උත්සාහ කරන්න"],
+  cr:"නිර්මාණය",ct:"සම්බන්ධ වන්න",ov:"සම්පූර්ණ ලකුණු (සියලුම මොඩියුල)",empty:"මෙම මොඩියුලයේ පෙන්වීමට ප්‍රශ්න නැත."},
+ ta:{t:"ஆசிரியர் சேவைத் திறன் தடை – MCQ பயிற்சி",s:"தொகுதிகள் 1 – 4 · அனைத்து வினாக்களும் ஒரே இடத்தில்",all:"அனைத்து வினாக்கள்",
+  m:{1:"தொகுதி 1 – ஆசிரியர் திறன் கட்டமைப்பு & தொழில்சார்மை",2:"தொகுதி 2 – கற்பித்தல் முறையியல்",3:"தொகுதி 3 – கல்வித் தொழில்நுட்பம் (EdTech)",4:"தொகுதி 4 – கல்விச் சட்டம்"},
+  qs:"வினாக்கள்",ans:"பதிலளித்தவை",cor:"சரியானவை",sc:"மதிப்பெண்",shuf:"🔀 கலக்கு",rst:"🔄 மீண்டும் தொடங்கு",fin:"🏁 முடித்து மதிப்பெண் பார்",
+  rev:"சரியான விடையைப் பார்",okm:"✔ சரி!",badm:"✘ தவறு",exp:"விளக்கம்",ref:"குறிப்பு",
+  notr:"இந்த வினாவின் மொழிபெயர்ப்பு இன்னும் இல்லை – சிங்களத்தில் காட்டப்படுகிறது.",rt:"உங்கள் முடிவு",of:"இல்",un:"பதிலளிக்காதவை",
+  rw:"தவறான விடைகளை மீளப் பார்",ag:"மீண்டும் முயற்சி",cl:"மூடு",all2:"அனைத்தையும் காட்டு",wo:"தவறான / பதிலளிக்காத வினாக்கள் மட்டும் காட்டப்படுகின்றன.",
+  g:["மிகச் சிறப்பு! 🎉","மிக நன்று 👏","நன்று, இன்னும் சிறிது பயிற்சி செய்யுங்கள்","மேலும் படித்து மீண்டும் முயற்சிக்கவும்"],
+  cr:"உருவாக்கியவர்",ct:"தொடர்புக்கு",ov:"மொத்த மதிப்பெண் (அனைத்துத் தொகுதிகளும்)",empty:"இந்தத் தொகுதியில் காட்ட வினாக்கள் இல்லை."},
+ en:{t:"Teacher Service Efficiency Bar – MCQ Practice",s:"Modules 1 – 4 · all questions in one place",all:"All questions",
+  m:{1:"Module 1 – Teacher Competency Framework & Professionalism",2:"Module 2 – Teaching Methodology",3:"Module 3 – Educational Technology (EdTech)",4:"Module 4 – Education Law"},
+  qs:"Questions",ans:"Answered",cor:"Correct",sc:"Score",shuf:"🔀 Shuffle",rst:"🔄 Restart",fin:"🏁 Finish & see score",
+  rev:"Show correct answer",okm:"✔ Correct!",badm:"✘ Incorrect",exp:"Explanation",ref:"Reference",
+  notr:"This question is not translated yet – shown in Sinhala.",rt:"Your result",of:"of",un:"Unanswered",
+  rw:"Review wrong answers",ag:"Try again",cl:"Close",all2:"Show all",wo:"Showing wrong / unanswered questions only.",
+  g:["Excellent! 🎉","Very good 👏","Good – a little more practice","Keep studying and try again"],
+  cr:"Created by",ct:"Contact",ov:"Overall score (all modules)",empty:"No questions to show in this module."}
+};
+const LN={si:"සිංහල",ta:"தமிழ்",en:"English"};
+let lang="si",mod=0,wrongOnly=false;
+try{lang=localStorage.getItem("qlang")||"si"}catch(e){}
+if(!UI[lang])lang="si";
+const ans={},shown={},orders={};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+const T=o=>o?(o[lang]??o.si??""):"";
+const hasTr=q=>lang==="si"||!!(q.q[lang]&&q.o[lang]);
+const ui=()=>UI[lang];
+const ids=()=>{const k=mod;if(!orders[k])orders[k]=Q.map((_,i)=>i).filter(i=>!k||Q[i].m===k);return orders[k]};
+const view=()=>ids().filter(i=>!wrongOnly||ans[i]!==Q[i].c);
+const stat=l=>({n:l.length,a:l.filter(i=>i in ans).length,c:l.filter(i=>ans[i]===Q[i].c).length});
+
+function card(i,n,total){
+  const q=Q[i],u=ui(),done=i in ans,right=ans[i]===q.c,lg=hasTr(q)?lang:"si";
+  const opts=q.o[lg].map((t,j)=>{
+    let cl="";
+    if(done){if(j===ans[i])cl=right?"ok":"bad";else if(j===q.c&&(right||shown[i]))cl="ok"}
+    return `<button class="opt ${cl}" data-i="${i}" data-j="${j}" ${done?"disabled":""}><i>${"ABCD"[j]}</i><span>${esc(t)}</span></button>`;
+  }).join("");
+  let fb="",ex="";
+  if(done){
+    fb=`<div class="fb ${right?"ok":"bad"}">${right?u.okm:u.badm}</div>`;
+    if(!right&&!shown[i])fb+=`<button class="btn gold" data-rev="${i}">👁 ${u.rev}</button>`;
+    const nt=T(q.n),h=T(q.h);
+    if((right||shown[i])&&(nt||h))ex=`<div class="exp"><b>${u.exp}${h?" · "+esc(h):""}</b>${nt&&nt!==h?esc(nt):""}</div>`;
+  }
+  return `<article class="card" id="c${i}"><div class="meta"><span class="tag">${esc(u.m[q.m])}</span><span>${n} / ${total}</span></div>
+  ${hasTr(q)?"":`<p class="nt">ⓘ ${u.notr}</p>`}<h3>${esc(T(q.q))}</h3>${opts}${fb}${ex}</article>`;
+}
+function stats(){
+  const u=ui(),s=stat(ids());
+  $("stats").innerHTML=`<span>${u.qs}: <b>${s.n}</b></span><span>${u.ans}: <b>${s.a}</b></span><span>${u.cor}: <b>${s.c}</b></span><span>${u.sc}: <b>${s.a?Math.round(s.c/s.a*100):0}%</b></span>`;
+  $("fill").style.width=(s.n?s.a/s.n*100:0)+"%";
+}
+function chrome(){
+  const u=ui();
+  document.documentElement.lang=lang;document.title=u.t;
+  $("hTitle").textContent=u.t;$("hSub").textContent=u.s;
+  $("lang").innerHTML=Object.keys(LN).map(k=>`<button data-l="${k}" class="${k===lang?"on":""}">${LN[k]}</button>`).join("");
+  const tabs=[[0,u.all,Q.length]].concat([1,2,3,4].map(m=>[m,u.m[m],Q.filter(q=>q.m===m).length]));
+  $("mods").innerHTML=tabs.map(t=>`<button data-m="${t[0]}" class="${t[0]===mod?"on":""}">${esc(t[1])}<small>(${t[2]})</small></button>`).join("");
+  $("tools").innerHTML=`<button class="btn" data-a="shuf">${u.shuf}</button><button class="btn" data-a="rst">${u.rst}</button><button class="btn pri" data-a="fin">${u.fin}</button>`;
+  $("foot").innerHTML=`${u.cr}: <b>T.M.Hashan Pradeep</b> · ${u.ct}: <a href="mailto:tmhashanpk@gmail.com">tmhashanpk@gmail.com</a>`;
+}
+function render(){
+  const u=ui(),l=view();
+  chrome();stats();
+  const nt=$("note");nt.style.display=wrongOnly?"block":"none";
+  nt.innerHTML=`${u.wo} <button class="btn" data-a="all">${u.all2}</button>`;
+  $("list").innerHTML=l.length?l.map((i,n)=>card(i,n+1,l.length)).join(""):`<p style="text-align:center;color:var(--muted);margin-top:30px">${u.empty}</p>`;
+  $("end").innerHTML=l.length?`<button class="btn pri" data-a="fin">${u.fin}</button>`:"";
+}
+function refresh(i){
+  const l=view(),el=$("c"+i);
+  if(el)el.outerHTML=card(i,l.indexOf(i)+1,l.length);
+  stats();
+}
+function result(){
+  const u=ui(),s=stat(ids()),all=stat(Q.map((_,i)=>i)),p=s.n?Math.round(s.c/s.n*100):0;
+  const g=u.g[p>=85?0:p>=65?1:p>=45?2:3];
+  const name=mod?u.m[mod]:u.all;
+  $("dlg").innerHTML=`<h2>${u.rt}</h2><p>${esc(name)}</p><div class="big">${s.c} / ${s.n}</div><div class="pct">${p}%</div>
+  <p><b>${g}</b></p><p>${u.cor}: ${s.c} · ${u.badm.replace("✘ ","")}: ${s.a-s.c} · ${u.un}: ${s.n-s.a}</p>
+  ${mod?`<p>${u.ov}: <b>${all.c} / ${all.n}</b></p>`:""}
+  <div class="tools"><button class="btn pri" data-a="rw">${u.rw}</button><button class="btn" data-a="ag">${u.ag}</button><button class="btn" data-a="cl">${u.cl}</button></div>`;
+  $("ov").classList.add("show");
+}
+function reset(){
+  ids().forEach(i=>{delete ans[i];delete shown[i]});wrongOnly=false;
+}
+document.addEventListener("click",e=>{
+  const b=e.target.closest("button");if(!b)return;
+  const d=b.dataset;
+  if(d.l){lang=d.l;try{localStorage.setItem("qlang",lang)}catch(x){}render()}
+  else if(d.m!==undefined){mod=+d.m;wrongOnly=false;render();scrollTo(0,0)}
+  else if(d.j!==undefined){const i=+d.i;if(!(i in ans)){ans[i]=+d.j;refresh(i)}}
+  else if(d.rev!==undefined){shown[+d.rev]=true;refresh(+d.rev)}
+  else if(d.a==="shuf"){const a=ids();for(let k=a.length-1;k>0;k--){const r=Math.floor(Math.random()*(k+1));[a[k],a[r]]=[a[r],a[k]]}render()}
+  else if(d.a==="rst"){reset();render();scrollTo(0,0)}
+  else if(d.a==="fin")result();
+  else if(d.a==="cl")$("ov").classList.remove("show");
+  else if(d.a==="ag"){$("ov").classList.remove("show");reset();render();scrollTo(0,0)}
+  else if(d.a==="rw"){$("ov").classList.remove("show");wrongOnly=true;render();scrollTo(0,0)}
+  else if(d.a==="all"){wrongOnly=false;render()}
+});
+render();
+</script>
+</body>
+</html>
